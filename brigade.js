@@ -31,8 +31,8 @@ events.on("push", (brigadeEvent, project) => {
     console.log(`==> starting pipeline for docker image: ${brigConfig.get("apiACRImage")}:${brigConfig.get("imageTag")}`)
     var pipeline = new Group()
     //pipeline.add(slack)
-    pipeline.add(golang)
-    pipeline.add(docker)
+    //pipeline.add(golang)
+    //pipeline.add(docker)
     pipeline.add(helm)
     if (brigConfig.get("branch") == "master") {
         pipeline.runEach()
