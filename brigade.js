@@ -5,7 +5,7 @@ events.on("push", (brigadeEvent, project) => {
     // setup variables
     var gitPayload = JSON.parse(brigadeEvent.payload)
     var brigConfig = new Map()
-    brigConfig.set("acrServer", project.secrets.acrServer)
+    brigConfig.set("acrServer", '')
     brigConfig.set("acrUsername", project.secrets.acrUsername)
     brigConfig.set("acrPassword", project.secrets.acrPassword)
     brigConfig.set("apiImage", "alex202/smackapi")
